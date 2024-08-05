@@ -1,12 +1,77 @@
 ---
-let search = 'sasha_amour'
+const search =
+  Astro.url.searchParams
+    .get('search')
+    ?.toLowerCase() || ''
 
-try {
-  search =
-    Astro.url.searchParams
-      .get('search')
-      .toLowerCase() || ''
-} catch (error) {}
+const sites = [
+  [
+    'Google',
+    `https://www.google.com/search?q=${search}+cam`,
+  ],
+  [
+    'ArchiveBate',
+    `https://archivebate.com/profile/${search}`,
+  ],
+  [
+    'LiveCamRips',
+    `https://www.livecamrips.com/search/${search}/1`,
+  ],
+  [
+    'ShowCamRips',
+    `https://www.showcamrips.com/model/en/${search}`,
+  ],
+  [
+    'XGirls',
+    `https://xgirls.webcam/search/${search}`,
+  ],
+  [
+    'XHomeAlone',
+    `https://xhomealone.com/search/${search}`,
+  ],
+  [
+    'BestCam',
+    `https://bestcam.tv/model/${search}`,
+  ],
+  [
+    'WebCamRips',
+    `https://webcamrips.to/?s=${search}`,
+  ],
+  [
+    'WebPussi',
+    `https://www.webpussi.com/search/${search}`,
+  ],
+  ['Recu', `https://recu.me/performer/${search}`],
+  [
+    'ChaturFlix',
+    `https://chaturflix.cam/performer/${search}`,
+  ],
+  [
+    'CamWhoresBay (broken)',
+    `https://www.camwhoresbay.com/tags/${search}`,
+  ],
+  [
+    'CumCams',
+    `https://cumcams.cc/performer/${search}`,
+  ],
+  ['CamWh', `https://camwh.com/search/${search}`],
+  [
+    'ECamRips',
+    `https://www.ecamrips.com/model/en/${search}`,
+  ],
+  [
+    'StreamLeak',
+    `https://stream-leak.com/search/${search}`,
+  ],
+  [
+    'Fap666',
+    `http://www.fap666.com/search/${search}`,
+  ],
+  [
+    'Curbate',
+    `https://curbate.tv/models/${search}/videos`,
+  ],
+]
 ---
 
 <html lang='en'>
@@ -25,147 +90,39 @@ try {
       name='generator'
       content={Astro.generator}
     />
-    <title>Astro</title>
+    <title>
+      {`${search && `${search} – `}MetaSearchCam`}
+    </title>
+    <link
+      rel='stylesheet'
+      href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css'
+    />
   </head>
-  <body>
-    <h1>Results for {search}:</h1>
+
+  <body class='container'>
     <form>
       <input
         type='text'
         name='search'
-        value={search}
+        autofocus
       />
-      <button type='submit'>Search</button>
+      <input type='submit' hidden />
     </form>
-    <ul>
-      <li>
-        <a
-          href={`https://www.google.com/search?q=${search}+cam`}
-          target='_blank'
-        >
-          Google
-        </a>
-      </li>
-      <li>
-        <a
-          href={`https://archivebate.com/profile/${search}`}
-          target='_blank'
-        >
-          ArchiveBate
-        </a>
-      </li>
-      <li>
-        <a
-          href={`https://www.livecamrips.com/search/${search}/1`}
-          target='_blank'
-        >
-          LiveCamRips
-        </a>
-      </li>
-      <li>
-        <a
-          href={`https://www.showcamrips.com/model/en/${search}`}
-          target='_blank'
-        >
-          ShowCamRips
-        </a>
-      </li>
-      <li>
-        <a
-          href={`https://xgirls.webcam/search/${search}`}
-          target='_blank'
-        >
-          XGirls
-        </a>
-      </li>
-      <li>
-        <a
-          href={`https://xhomealone.com/search/${search}`}
-          target='_blank'
-        >
-          XHomeAlone
-        </a>
-      </li>
-      <li>
-        <a
-          href={`https://bestcam.tv/model/${search}`}
-          target='_blank'
-        >
-          BestCam
-        </a>
-      </li>
-      <li>
-        <a
-          href={`https://webcamrips.to/?s=${search}`}
-          target='_blank'
-        >
-          WebCamRips
-        </a>
-      </li>
-      <li>
-        <a
-          href={`https://www.webpussi.com/search/${search}`}
-          target='_blank'
-        >
-          WebPussi
-        </a>
-      </li>
-      <li>
-        <a
-          href={`https://recu.me/performer/${search}`}
-          target='_blank'
-        >
-          Recu
-        </a>
-      </li>
-      <li>
-        <a
-          href={`https://chaturflix.cam/performer/${search}`}
-          target='_blank'
-        >
-          ChaturFlix
-        </a>
-      </li>
-      <li>
-        <a
-          href={`https://www.camwhoresbay.com/tags/${search}`}
-          target='_blank'
-        >
-          CamWhoresBay (broken)
-        </a>
-      </li>
-      <li>
-        <a
-          href={`https://cumcams.cc/performer/${search}`}
-          target='_blank'
-        >
-          CumCams
-        </a>
-      </li>
-      <li>
-        <a
-          href={`https://camwh.com/search/${search}`}
-          target='_blank'
-        >
-          CamWh
-        </a>
-      </li>
-      <li>
-        <a
-          href={`https://www.ecamrips.com/model/en/${search}`}
-          target='_blank'
-        >
-          ECamRips
-        </a>
-      </li>
-      <li>
-        <a
-          href={`https://stream-leak.com/search/${search}`}
-          target='_blank'
-        >
-          StreamLeak
-        </a>
-      </li>
-    </ul>
+
+    <h1>{search}</h1>
+
+    <div class='collection'>
+      {
+        sites.map(site => (
+          <a
+            href={site[1]}
+            target='_blank'
+            class='collection-item'
+          >
+            {site[0]}
+          </a>
+        ))
+      }
+    </div>
   </body>
 </html>
