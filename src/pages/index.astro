@@ -6,22 +6,6 @@ const search =
 
 const sites = [
   [
-    'Google',
-    `https://www.google.com/search?q=${search}+cam`,
-  ],
-  [
-    'ArchiveBate',
-    `https://archivebate.com/profile/${search}`,
-  ],
-  [
-    'LiveCamRips',
-    `https://www.livecamrips.su/search/${search}/1`,
-  ],
-  [
-    'ShowCamRips',
-    `https://www.showcamrips.com/model/en/${search}`,
-  ],
-  [
     'XGirls',
     `https://xgirls.webcam/search/${search}`,
   ],
@@ -63,10 +47,7 @@ const sites = [
     'StreamLeak',
     `https://stream-leak.com/search/${search}`,
   ],
-  [
-    'Fap666',
-    `http://www.fap666.com/search/${search}`,
-  ],
+
   [
     'Curbate',
     `https://curbate.tv/models/${search}/videos`,
@@ -88,9 +69,11 @@ const sites = [
     `https://www.camhub.cc/search/${search}/`,
   ],
   [
-    'SpankBang',
-    `https://fr.spankbang.com/s/${search}/`,
+    'CamSave',
+    // `https://www.camsavexx.com/search/?q=${search}`,
+    `https://www.camsave2.com/?search=${search}`,
   ],
+
   [
     'EPorner',
     `https://www.eporner.com/search/${search}/`,
@@ -113,13 +96,50 @@ const sites = [
     `https://www.fuckit.cc/models/${search}/`,
   ],
   [
-    'CamSave',
-    `https://www.camsavexx.com/search/?q=${search}`,
+    'camchickscaps',
+    `https://camchickscaps.com/?s=${search}`,
   ],
-  // [
-  //   'HotWebCams',
-  //   `https://hotwebcams.org/model/${search}/`,
-  // ],
+
+  [
+    'moreamateurs',
+    `https://moreamateurs.com/models/${search}/`,
+  ],
+  ['afrilov', `https://afrilov.com/?s=${search}`],
+
+  [
+    'HotWebCams',
+    `https://hotwebcams.org/model/${search}/`,
+  ],
+]
+
+const faves = [
+  [
+    'Google',
+    `https://www.google.com/search?q=${search}+cam`,
+  ],
+  [
+    'LiveCamRips',
+    `https://www.livecamrips.su/search/${search}/1`,
+  ],
+  [
+    'ArchiveBate',
+    `https://archivebate.com/profile/${search}`,
+  ],
+]
+
+const legacy = [
+  [
+    'SpankBang',
+    `https://fr.spankbang.com/s/${search}/`,
+  ],
+  [
+    'Fap666',
+    `http://www.fap666.com/search/${search}`,
+  ],
+  [
+    'ShowCamRips',
+    `https://www.showcamrips.com/model/en/${search}`,
+  ],
 ]
 ---
 
@@ -159,8 +179,59 @@ const sites = [
     </form>
 
     <h1>{search}</h1>
+    <div class='row'>
+      {
+        faves
+          .sort((a, b) =>
+            a[0].localeCompare(b[0])
+          )
+          .map(site => (
+            <a
+              href={site[1]}
+              target='_blank'
+              class='btn green'
+            >
+              {site[0]}
+            </a>
+          ))
+      }
+    </div>
+    <div class='row'>
+      {
+        sites
+          .sort((a, b) =>
+            a[0].localeCompare(b[0])
+          )
+          .map(site => (
+            <a
+              href={site[1]}
+              target='_blank'
+              class='btn blue'
+            >
+              {site[0]}
+            </a>
+          ))
+      }
+    </div>
+    <div class='row'>
+      {
+        legacy
+          .sort((a, b) =>
+            a[0].localeCompare(b[0])
+          )
+          .map(site => (
+            <a
+              href={site[1]}
+              target='_blank'
+              class='btn red'
+            >
+              {site[0]}
+            </a>
+          ))
+      }
+    </div>
 
-    <div class='collection'>
+    <!-- <div class='collection'>
       {
         sites.map(site => (
           <a
@@ -172,6 +243,6 @@ const sites = [
           </a>
         ))
       }
-    </div>
+    </div> -->
   </body>
 </html>
