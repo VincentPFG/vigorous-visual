@@ -17,6 +17,10 @@ const en = [
     'wr fr',
     `https://www.wordreference.com/enfr/${search}`,
   ],
+  [
+    'm-w',
+    `https://www.merriam-webster.com/dictionary/${search}`,
+  ],
 ]
 const es = [
   [
@@ -52,6 +56,10 @@ const fr = [
   [
     'wr de',
     `https://www.wordreference.com/frde/${search}`,
+  ],
+  [
+    'r',
+    `https://dictionnaire.lerobert.com/definition/${search}`,
   ],
 ]
 const it = [
@@ -93,7 +101,9 @@ const de = [
       content={Astro.generator}
     />
     <title>
-      {`${search && `${search} – `}MyDictionary`}
+      {
+        `${search && `${search} – `}SupraDictionary`
+      }
     </title>
     <link
       rel='stylesheet'
