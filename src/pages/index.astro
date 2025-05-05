@@ -4,149 +4,74 @@ const search =
     .get('search')
     ?.toLowerCase() || ''
 
-const sites = [
+const en = [
   [
-    'XGirls',
-    `https://xgirls.webcam/search/${search}`,
+    'w',
+    `https://en.wiktionary.org/wiki/${search}`,
   ],
   [
-    'XHomeAlone',
-    `https://xhomealone.com/search/${search}`,
+    'wr es',
+    `https://www.wordreference.com/enes/${search}`,
   ],
   [
-    'BestCam',
-    `https://bestcam.tv/model/${search}`,
-  ],
-  [
-    'WebCamRips',
-    `https://webcamrips.to/?s=${search}`,
-  ],
-  [
-    'WebPussi',
-    `https://www.webpussi.com/search/${search}`,
-  ],
-  ['Recu', `https://recu.me/performer/${search}`],
-  [
-    'ChaturFlix',
-    `https://chaturflix.cam/performer/${search}`,
-  ],
-  [
-    'CamWhoresBay',
-    `https://www.camwhoresbay.com/search/${search}/`,
-  ],
-  [
-    'CumCams',
-    `https://cumcams.cc/performer/${search}`,
-  ],
-  ['CamWh', `https://camwh.com/search/${search}`],
-  [
-    'ECamRips',
-    `https://www.ecamrips.com/model/en/${search}`,
-  ],
-  [
-    'StreamLeak',
-    `https://stream-leak.com/search/${search}`,
-  ],
-
-  [
-    'Curbate',
-    `https://curbate.tv/models/${search}/videos`,
-  ],
-  [
-    'CamStreams',
-    `https://camstreams.tv/search/${search}`,
-  ],
-  [
-    'CamWhores',
-    `https://www.camwhores.tv/search/${search}/`,
-  ],
-  [
-    'PornZog',
-    `https://pornzog.com/search/?s=${search}`,
-  ],
-  [
-    'CamHub',
-    `https://www.camhub.cc/search/${search}`,
-  ],
-  [
-    'CamSave',
-    // `https://www.camsavexx.com/search/?q=${search}`,
-    `https://www.camsave2.com/?search=${search}`,
-  ],
-
-  [
-    'EPorner',
-    `https://www.eporner.com/search/${search}`,
-  ],
-  [
-    'OnScreens',
-    `https://www.onscreens.me/search?q=${search}`,
-  ],
-  [
-    'CamBro',
-    `https://www.cambro.tv/search/${search}`,
-  ],
-
-  [
-    'BustyAndBooty',
-    `https://bustyandbooty.webcam/search/?q=${search}`,
-  ],
-  [
-    'FuckIt',
-    `https://www.fuckit.cc/models/${search}`,
-  ],
-  [
-    'camchickscaps',
-    `https://camchickscaps.com/?s=${search}`,
-  ],
-
-  [
-    'moreamateurs',
-    `https://moreamateurs.com/models/${search}`,
-  ],
-  ['afrilov', `https://afrilov.com/?s=${search}`],
-
-  [
-    'HotWebCams',
-    `https://hotwebcams.org/model/${search}`,
-  ],
-  [
-    'erome',
-    `https://erome.com/search?q=${search}`,
+    'wr fr',
+    `https://www.wordreference.com/enfr/${search}`,
   ],
 ]
-
-const faves = [
+const es = [
   [
-    'Google',
-    `https://www.google.com/search?q=${search}+cam`,
+    'w',
+    `https://es.wiktionary.org/wiki/${search}`,
   ],
   [
-    'LiveCamRips',
-    `https://www.livecamrips.su/search/${search}/1`,
+    'wr en',
+    `https://www.wordreference.com/esen/${search}`,
   ],
   [
-    'ArchiveBate',
-    `https://archivebate.com/profile/${search}`,
-  ],
-  [
-    'images',
-    `https://www.google.com/search?q=${search}+cam&sca_esv=ccd2c1cf7e06f38b&sxsrf=AHTn8zrystSOxOE3G3Hyp6sCQ-eRMUgzZg:1744640248567&source=hp&biw=1239&bih=621&ei=9xj9Z5rXNYqTwbkPpZ2UiQY&iflsig=ACkRmUkAAAAAZ_0nCCgQc6UcLGEJUi1Vj0QgKKht6NOG&ved=0ahUKEwjarvGx29eMAxWKSTABHaUOJWEQ4dUDCBc&uact=5&oq=test&gs_lp=EgNpbWciBHRlc3QyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAESK4KUABYwgNwAHgAkAEAmAFzoAG9A6oBAzAuNLgBA8gBAPgBAYoCC2d3cy13aXotaW1nmAIEoALZA5gDAJIHAzAuNKAHjBGyBwMwLjS4B9kD&sclient=img&udm=2`,
+    'wr fr',
+    `https://www.wordreference.com/esfr/${search}`,
   ],
 ]
-
-const legacy = [
+const fr = [
   [
-    'SpankBang',
-    `https://fr.spankbang.com/s/${search}`,
+    'w',
+    `https://fr.wiktionary.org/wiki/${search}`,
   ],
   [
-    'Fap666',
-    `http://www.fap666.com/search/${search}`,
+    'wr es',
+    `https://www.wordreference.com/fres/${search}`,
   ],
   [
-    'ShowCamRips',
-    `https://www.showcamrips.com/model/en/${search}`,
+    'wr en',
+    `https://www.wordreference.com/fren/${search}`,
+  ],
+  [
+    'wr it',
+    `https://www.wordreference.com/frit/${search}`,
+  ],
+  [
+    'wr de',
+    `https://www.wordreference.com/frde/${search}`,
+  ],
+]
+const it = [
+  [
+    'w',
+    `https://en.wiktionary.org/wiki/${search}`,
+  ],
+  [
+    'wr fr',
+    `https://www.wordreference.com/itfr/${search}`,
+  ],
+]
+const de = [
+  [
+    'w',
+    `https://de.wiktionary.org/wiki/${search}`,
+  ],
+  [
+    'wr fr',
+    `https://www.wordreference.com/defr/${search}`,
   ],
 ]
 ---
@@ -168,7 +93,7 @@ const legacy = [
       content={Astro.generator}
     />
     <title>
-      {`${search && `${search} – `}MetaSearchCam`}
+      {`${search && `${search} – `}MyDictionary`}
     </title>
     <link
       rel='stylesheet'
@@ -188,69 +113,106 @@ const legacy = [
 
     <h1>{search}</h1>
     <div class='row'>
-      {
-        faves
-          .sort((a, b) =>
-            a[0].localeCompare(b[0])
-          )
-          .map(site => (
-            <a
-              href={site[1]}
-              target='_blank'
-              class='btn green'
-            >
-              {site[0]}
-            </a>
-          ))
-      }
+      <div class='col'>
+        <p>English</p>
+        <div>
+          {
+            en
+              .sort((a, b) =>
+                a[0].localeCompare(b[0])
+              )
+              .map(site => (
+                <a
+                  href={site[1]}
+                  target='_blank'
+                  class='btn purple'
+                >
+                  {site[0]}
+                </a>
+              ))
+          }
+        </div>
+      </div>
+      <div class='col'>
+        <p>Spanish</p>
+        <div>
+          {
+            es
+              .sort((a, b) =>
+                a[0].localeCompare(b[0])
+              )
+              .map(site => (
+                <a
+                  href={site[1]}
+                  target='_blank'
+                  class='btn red'
+                >
+                  {site[0]}
+                </a>
+              ))
+          }
+        </div>
+      </div>
+      <div class='col'>
+        <p>French</p>
+        <div>
+          {
+            fr
+              .sort((a, b) =>
+                a[0].localeCompare(b[0])
+              )
+              .map(site => (
+                <a
+                  href={site[1]}
+                  target='_blank'
+                  class='btn white'
+                >
+                  {site[0]}
+                </a>
+              ))
+          }
+        </div>
+      </div>
+      <div class='col'>
+        <p>Italian</p>
+        <div>
+          {
+            it
+              .sort((a, b) =>
+                a[0].localeCompare(b[0])
+              )
+              .map(site => (
+                <a
+                  href={site[1]}
+                  target='_blank'
+                  class='btn blue'
+                >
+                  {site[0]}
+                </a>
+              ))
+          }
+        </div>
+      </div>
+      <div class='col'>
+        <p>German</p>
+        <div>
+          {
+            de
+              .sort((a, b) =>
+                a[0].localeCompare(b[0])
+              )
+              .map(site => (
+                <a
+                  href={site[1]}
+                  target='_blank'
+                  class='btn green'
+                >
+                  {site[0]}
+                </a>
+              ))
+          }
+        </div>
+      </div>
     </div>
-    <div class='row'>
-      {
-        sites
-          .sort((a, b) =>
-            a[0].localeCompare(b[0])
-          )
-          .map(site => (
-            <a
-              href={site[1]}
-              target='_blank'
-              class='btn blue'
-            >
-              {site[0]}
-            </a>
-          ))
-      }
-    </div>
-    <div class='row'>
-      {
-        legacy
-          .sort((a, b) =>
-            a[0].localeCompare(b[0])
-          )
-          .map(site => (
-            <a
-              href={site[1]}
-              target='_blank'
-              class='btn red'
-            >
-              {site[0]}
-            </a>
-          ))
-      }
-    </div>
-
-    <!-- <div class='collection'>
-      {
-        sites.map(site => (
-          <a
-            href={site[1]}
-            target='_blank'
-            class='collection-item'
-          >
-            {site[0]}
-          </a>
-        ))
-      }
-    </div> -->
   </body>
 </html>
