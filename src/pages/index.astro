@@ -19,10 +19,10 @@ const en = [
     'm-w',
     `https://www.merriam-webster.com/dictionary/${search}`,
   ],
-  [
-    'c de',
-    `https://dictionary.cambridge.org/dictionary/english-german/${search}`,
-  ],
+  // [
+  //   'c de',
+  //   `https://dictionary.cambridge.org/dictionary/english-german/${search}`,
+  // ],
 ]
 const es = [
   [
@@ -59,10 +59,10 @@ const fr = [
     'wr it',
     `https://www.wordreference.com/frit/${search}`,
   ],
-  [
-    'wr de',
-    `https://www.wordreference.com/frde/${search}`,
-  ],
+  // [
+  //   'wr de',
+  //   `https://www.wordreference.com/frde/${search}`,
+  // ],
   [
     'r',
     `https://dictionnaire.lerobert.com/definition/${search}`,
@@ -160,11 +160,11 @@ import Language from '../components/language.astro'
         list={it}
         color='blue'
       />
-      <Language
+      <!-- <Language
         lang='German'
         list={de}
         color='green'
-      />
+      /> -->
     </div>
   </body>
 </html>
