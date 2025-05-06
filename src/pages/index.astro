@@ -1,8 +1,6 @@
 ---
 const search =
-  Astro.url.searchParams
-    .get('search')
-    ?.toLowerCase() || ''
+  Astro.url.searchParams.get('search') || ''
 
 const en = [
   [
@@ -65,7 +63,7 @@ const fr = [
 const it = [
   [
     'w',
-    `https://en.wiktionary.org/wiki/${search}`,
+    `https://it.wiktionary.org/wiki/${search}`,
   ],
   [
     'wr fr',
@@ -82,6 +80,8 @@ const de = [
     `https://www.wordreference.com/defr/${search}`,
   ],
 ]
+
+import Language from '../components/language.astro'
 ---
 
 <html lang='en'>
@@ -123,106 +123,31 @@ const de = [
 
     <h1>{search}</h1>
     <div class='row'>
-      <div class='col'>
-        <p>English</p>
-        <div>
-          {
-            en
-              .sort((a, b) =>
-                a[0].localeCompare(b[0])
-              )
-              .map(site => (
-                <a
-                  href={site[1]}
-                  target='_blank'
-                  class='btn purple'
-                >
-                  {site[0]}
-                </a>
-              ))
-          }
-        </div>
-      </div>
-      <div class='col'>
-        <p>Spanish</p>
-        <div>
-          {
-            es
-              .sort((a, b) =>
-                a[0].localeCompare(b[0])
-              )
-              .map(site => (
-                <a
-                  href={site[1]}
-                  target='_blank'
-                  class='btn red'
-                >
-                  {site[0]}
-                </a>
-              ))
-          }
-        </div>
-      </div>
-      <div class='col'>
-        <p>French</p>
-        <div>
-          {
-            fr
-              .sort((a, b) =>
-                a[0].localeCompare(b[0])
-              )
-              .map(site => (
-                <a
-                  href={site[1]}
-                  target='_blank'
-                  class='btn white'
-                >
-                  {site[0]}
-                </a>
-              ))
-          }
-        </div>
-      </div>
-      <div class='col'>
-        <p>Italian</p>
-        <div>
-          {
-            it
-              .sort((a, b) =>
-                a[0].localeCompare(b[0])
-              )
-              .map(site => (
-                <a
-                  href={site[1]}
-                  target='_blank'
-                  class='btn blue'
-                >
-                  {site[0]}
-                </a>
-              ))
-          }
-        </div>
-      </div>
-      <div class='col'>
-        <p>German</p>
-        <div>
-          {
-            de
-              .sort((a, b) =>
-                a[0].localeCompare(b[0])
-              )
-              .map(site => (
-                <a
-                  href={site[1]}
-                  target='_blank'
-                  class='btn green'
-                >
-                  {site[0]}
-                </a>
-              ))
-          }
-        </div>
-      </div>
+      <Language
+        lang='English'
+        list={en}
+        color='purple'
+      />
+      <Language
+        lang='Spanish'
+        list={es}
+        color='red'
+      />
+      <Language
+        lang='Français'
+        list={fr}
+        color='white'
+      />
+      <Language
+        lang='Italian'
+        list={it}
+        color='blue'
+      />
+      <Language
+        lang='German'
+        list={de}
+        color='green'
+      />
     </div>
   </body>
 </html>
