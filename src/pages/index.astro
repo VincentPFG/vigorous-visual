@@ -27,6 +27,10 @@ const en = [
     'wr it',
     `https://www.wordreference.com/enit/${search}`,
   ],
+  [
+    'wr pt',
+    `https://www.wordreference.com/enpt/${search}`,
+  ],
 ]
 const es = [
   [
@@ -49,6 +53,10 @@ const es = [
     'wr it',
     `https://www.wordreference.com/esit/${search}`,
   ],
+  [
+    'wr pt',
+    `https://www.wordreference.com/espt/${search}`,
+  ],
 ]
 const fr = [
   [
@@ -66,6 +74,10 @@ const fr = [
   [
     'wr it',
     `https://www.wordreference.com/frit/${search}`,
+  ],
+  [
+    'wr pt',
+    `https://www.wordreference.com/frpt/${search}`,
   ],
   // [
   //   'wr de',
@@ -96,6 +108,44 @@ const it = [
   [
     'wr es',
     `https://www.wordreference.com/ites/${search}`,
+  ],
+  [
+    'wr pt',
+    `https://www.wordreference.com/itpt/${search}`,
+  ],
+]
+const pt = [
+  [
+    'w',
+    `https://pt.wiktionary.org/wiki/${search}`,
+  ],
+  [
+    'wr fr',
+    `https://www.wordreference.com/ptfr/${search}`,
+  ],
+  // [
+  //   'wr ⇒',
+  //   `https://www.wordreference.com/conj/ptverbs.aspx?v=${search}`,
+  // ],
+  [
+    'wr en',
+    `https://www.wordreference.com/pten/${search}`,
+  ],
+  [
+    'wr es',
+    `https://www.wordreference.com/ptes/${search}`,
+  ],
+  [
+    'wr it',
+    `https://www.wordreference.com/ptit/${search}`,
+  ],
+  [
+    'PLP',
+    `http://www.portaldalinguaportuguesa.org/simplesearch.php?sel=exact&action=simplesearch&base=form&sel=exact&query=${search}&ok=OK`,
+  ],
+  [
+    'P',
+    `https://dicionario.priberam.org/${search}`,
   ],
 ]
 const de = [
@@ -155,32 +205,35 @@ import Language from '../components/language.astro'
     </form>
 
     <h1>{search}</h1>
-    <div class='row'>
-      <Language
-        lang='English'
-        list={en}
-        color='purple'
-      />
-      <Language
-        lang='Spanish'
-        list={es}
-        color='red'
-      />
-      <Language
-        lang='French'
-        list={fr}
-        color='grey'
-      />
-      <Language
-        lang='Italian'
-        list={it}
-        color='blue'
-      />
-      <!-- <Language
+    <Language
+      lang='English'
+      list={en}
+      color='purple'
+    />
+    <Language
+      lang='Spanish'
+      list={es}
+      color='red'
+    />
+    <Language
+      lang='French'
+      list={fr}
+      color='grey'
+    />
+    <Language
+      lang='Italian'
+      list={it}
+      color='blue'
+    />
+    <Language
+      lang='Portuguese'
+      list={pt}
+      color='green'
+    />
+    <!-- <Language
         lang='German'
         list={de}
         color='green'
       /> -->
-    </div>
   </body>
 </html>
