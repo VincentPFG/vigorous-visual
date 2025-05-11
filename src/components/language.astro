@@ -2,7 +2,7 @@
 const { lang, list, color } = Astro.props
 ---
 
-<p>
+<p class='row'>
   <!-- <span>{lang}</span> -->
   {
     list
@@ -11,7 +11,7 @@ const { lang, list, color } = Astro.props
         <a
           href={site[1]}
           target='_blank'
-          class={`btn ${color}`}
+          class={`btn ${color} col s4 l2`}
         >
           {site[0]}
         </a>
