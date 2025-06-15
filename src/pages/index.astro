@@ -40,14 +40,18 @@ const en = [
   //   '⇆ es',
   //   `https://www.reverso.net/text-translation#sl=eng&tl=spa&text=${search}`,
   // ],
-  // [
-  //   'ox am',
-  //   `https://www.oxfordlearnersdictionaries.com/definition/american_english/${search}`,
-  // ],
-  // [
-  //   'ox br',
-  //   `https://www.oxfordlearnersdictionaries.com/definition/english/${search}`,
-  // ],
+  [
+    'ox am',
+    `https://www.oxfordlearnersdictionaries.com/definition/american_english/${search}`,
+  ],
+  [
+    'ox br',
+    `https://www.oxfordlearnersdictionaries.com/definition/english/${search}`,
+  ],
+  [
+    'cube',
+    `http://seas3.elte.hu/cube/index.pl?s=${search}&fullw=on&uni8=on&trick=on&vocl=on&goal=on&t=&syllcount=&maxout=&wfreq=0-9&grammar=`,
+  ],
 ]
 const es = [
   [
@@ -106,6 +110,14 @@ add1(
   'w',
   sl =>
     `https://${sl}.wiktionary.org/wiki/${search}`
+)
+add1(
+  'yg',
+  sl =>
+    `https://youglish.com/pronounce/${search}/${sl}`,
+  'english',
+  'spanish',
+  'french'
 )
 
 import Language from '../components/language.astro'
